@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour {
 	//每个固定时间执行一次，用于物理模拟
     void FixedUpdate()
     {
-		//从玩家的位置垂直向下发出长度为groundedRaycastDistance的射线，返回值表示玩家是否该射线是否碰撞到物体，该句代码用于检测玩家是否在地面上
+		// 从玩家的位置垂直向下发出长度为 groundedRaycastDistance 的射线，返回值表示玩家是否该射线是否碰撞到物体，该句代码用于检测玩家是否在地面上
         isGrounded = Physics.Raycast(transform.position, -Vector3.up, groundedRaycastDistance);
         Jump(isGrounded);	//调用跳跃函数
     }
