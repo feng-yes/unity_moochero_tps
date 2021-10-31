@@ -820,26 +820,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7966236797037357127, guid: 77a35cdaf85eb68439684f155a9f2013,
-        type: 3}
-      propertyPath: moveSpeed
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7966236797037357127, guid: 77a35cdaf85eb68439684f155a9f2013,
-        type: 3}
-      propertyPath: rotateSpeed
-      value: 120
-      objectReference: {fileID: 0}
-    - target: {fileID: 7966236797037357127, guid: 77a35cdaf85eb68439684f155a9f2013,
-        type: 3}
-      propertyPath: jumpVelocity
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4600439360423616811, guid: 77a35cdaf85eb68439684f155a9f2013,
-        type: 3}
-      propertyPath: health
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77a35cdaf85eb68439684f155a9f2013, type: 3}
 --- !u!1 &4600439360423616810 stripped
