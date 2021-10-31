@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour {
 	public int TargetScore=10;			//游戏获胜的目标分数
 	private int currentScore;			//游戏当前得分
 
+	public int maxEnemyCount = 10;  //最大敌人数
+	private int curEnemyCount = 0;  //当前敌人数
+
 	//游戏状态枚举，分别表示游戏进行（Playing）、游戏失败（GameOver）、游戏胜利（Winning）
 	public enum GameState {Playing,GameOver,Winning};	
 	public GameState gameState;			//游戏状态变量
@@ -71,5 +74,21 @@ public class GameManager : MonoBehaviour {
 	public void PlayerTakeDamage(int value){
 		if (playerHealth != null)
 			playerHealth.TakeDamage(value);
+	}
+
+	public bool CheckCanIncreaseEnemy(){
+		if(curEnemyCount >= maxEnemyCount){
+			return false;
+		}else{
+			return true;
+		}
+	}
+
+	public void IncreaseEnemy(){
+		curEnemyCount += 1;
+	}
+
+	public void DecreaseEnemy(){
+		curEnemyCount -= 1;
 	}
 }

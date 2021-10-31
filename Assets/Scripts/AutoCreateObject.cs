@@ -27,9 +27,12 @@ public class AutoCreateObject : MonoBehaviour {
 		if (GameManager.gm != null 
 			&& GameManager.gm.gameState != GameManager.GameState.Playing)	
 			return;
+		if(!GameManager.gm.CheckCanIncreaseEnemy())
+			return;
 		timer += Time.deltaTime;	//更新生成时间间隔，增加上一帧所花费的时间
 		if (timer >= createTime) {	//当生成时间间隔大于等于生成时间时
 			CreateObject ();		//调用CreateObject生成游戏对象
+			GameManager.gm.IncreaseEnemy();
 			timer = 0.0f;			//将生成时间间隔清零
 			createTime = Random.Range (minSecond, maxSecond);	//在[minSeconds,maxSeconds]区间随机设置生成时间
 		}

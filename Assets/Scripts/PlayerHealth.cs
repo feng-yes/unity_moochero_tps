@@ -3,7 +3,7 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour {
 
-	public int health = 10;			//玩家的生命值
+	public int health = 100;			//玩家的生命值
 	public bool isAlive = true;		//玩家是否存活
 
 	//每帧执行一次，检测玩家是否存活
